@@ -1,0 +1,11 @@
+[package]
+name = "sha-256-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A SHA-256 implementation in Rust"
+license = "MIT"
+
+[dependencies]
+
+[dev-dependencies]
