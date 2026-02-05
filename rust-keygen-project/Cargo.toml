@@ -1,0 +1,59 @@
+[package]
+name = "keygen-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Borelli-7"]
+description = "Educational Ed25519 cryptographic key generation implementation in pure Rust"
+repository = "https://github.com/Borelli-7/rust-blockchain-playground"
+license = "Apache-2.0"
+keywords = ["cryptography", "ed25519", "keygen", "education", "blockchain"]
+categories = ["cryptography", "command-line-utilities"]
+
+[lib]
+name = "keygen_rs"
+path = "src/lib.rs"
+
+[[bin]]
+name = "keygen-rs"
+path = "src/main.rs"
+
+[dependencies]
+# Cryptographically secure random number generation
+rand = "0.8"
+
+# SHA-512 hashing (required for Ed25519)
+sha2 = "0.10"
+
+# Command-line argument parsing
+clap = { version = "4.5", features = ["derive"] }
+
+# Memory zeroization for security
+zeroize = { version = "1.7", features = ["derive"] }
+
+# Encoding utilities
+hex = "0.4"
+base64 = "0.21"
+
+# Error handling
+thiserror = "1.0"
+
+# Lazy static initialization
+lazy_static = "1.4"
+
+# Elliptic curve arithmetic (well-tested field and curve primitives)
+curve25519-dalek-ng = "4.1"
+
+[dev-dependencies]
+# JSON parsing for test vectors
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Benchmarking
+criterion = "0.5"
+
+# Property-based testing (optional for future use)
+proptest = "1.4"
+
+[[bench]]
+name = "keygen_bench"
+harness = false

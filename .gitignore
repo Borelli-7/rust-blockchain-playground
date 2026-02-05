@@ -1,0 +1,28 @@
+# Rust build artifacts
+**/target/
+**/*.rs.bk
+**/*.pdb
+
+# Cargo lock file (uncomment if you want to commit it for binaries)
+# Cargo.lock
+
+# IDE files
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated keys and test files (keygen-rs specific)
+*.pem
+*.pub
+*.bin
+example_key.*
+example_format.*
+example_seed.*
+example_pubkey.*
+myfile.txt
